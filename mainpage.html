@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+		<title>Damaskus Entdecken</title>
+		<meta name="author" content="Sophia Urban, Felix Etzold, Antonia Gerdes"/>
+		<meta charset="utf-8"> 
+		<link rel="manifest" href="./manifest.json">
+    	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" href="stylesheet.css">
+		
+        <script src="data.js"></script>
+        <script src="functions.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+	<body onresize="setPositionOfImages()" onload="setPositionOfImages()">
+    	<div class="mapIcon">
+			<!--<button type="button" onclick="openMap()">Karte</button>-->
+			<img id="map_icon" src="pictures/Icon/world-map-icon.png" onClick="openMap()">
+    	</div>
+		
+	    <section class="map" >
+    		<img class="images intro" src="pictures/Intro/Intro_Karte.png" onload="startIntro()">
+    	</section>
+		<!--<section class="test">
+			<img class="images map hidden" src="pictures/damaskus_karte.png">
+		</section>-->
+		<section class="content"></section>
+	</body>
+</html>

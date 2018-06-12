@@ -1,0 +1,25 @@
+    {
+        "name": "Spielend Damaskus Entdecken",
+        "short_name": "DamaskusEntdecken",
+        "start_url": "/?homescreen=1",
+        "display" : "standalone",
+        "orientation": "landscape",
+        "theme_color" : "rgb(221, 142, 5)",
+        "background_color": "#fff", 
+       "icons": [{
+        "src": "pictures/Icon/muenze.png",
+        "type": "image/png"
+      }, {
+        "src": "pictures/Icon/muenze.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      }, {
+        "src": "pictures/Icon/muenze.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }, {
+        "src": "pictures/Icon/muenze.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }]
+    }

@@ -1,0 +1,479 @@
+body{
+	margin: 0;
+	height: auto;
+	overflow: hidden;
+	background-color: black;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+video {
+	display: block;
+	margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 60%;
+    min-height: 80%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;  
+}
+
+
+#bB{
+	position: absolute;
+	z-index: 1;
+}
+
+.images{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.mapIcon{
+	position: absolute;
+	left: 95%;
+	top: 5%;
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+	transform: scale(1.2);
+}
+
+
+.mapIcon:hover{
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+.hidden{
+	visibility: hidden !important;
+	display: none;
+}
+
+.content{
+	width: 100%;
+	position: relative;
+	margin: auto;
+	height: 100vh;
+}
+.dropdown{
+    width: 700px;
+    height: 270px;
+    left: 40%;
+    top: 0%;
+    color: white;
+	font-family: Arial;
+	opacity: 0.9;
+	position: absolute;
+	display:inline-block;
+	padding: 20px;
+	border-top: rgb(36, 36, 36) solid 70px;
+	background-color: rgb(78, 78, 78);
+	z-index: 5;
+}
+
+.fas{
+	position: absolute;
+	z-index: 4;
+}
+.fa-angle-down{
+    color: rgb(255, 172, 29);
+    left: 50%;
+	top: 0%;
+	z-index: 6;
+}
+.fa-info-circle{
+	color: rgb(255, 255, 255);
+}
+
+.fa-chevron-circle-right{
+	color: rgb(255, 172, 29);
+	transform: scale(1.2);
+	left: 1740px !important;
+	top: 500px !important;
+}
+
+.fa-chevron-circle-left{
+	color: rgb(255, 172, 29);
+	transform: scale(1.2);
+	left: 50px !important;
+	top: 500px !important;
+}
+
+.fas:hover{
+    cursor: pointer;
+   	color: rgb(58, 58, 58);
+	transform: scale(1.2);
+}
+.fa-angle-down:hover{
+    color: orange;
+}
+.fa-info-circle:hover{
+	color: white;
+	transform: scale(1.2);
+}
+
+.fa-chevron-circle-right:hover{
+	color: orange;
+	transform: scale(1.4);
+}
+
+.fa-chevron-circle-left:hover{
+	color: orange;
+	transform: scale(1.4);
+}
+
+
+.informationIcon{
+	z-index: 4;
+	position: absolute;
+}
+
+.informationText {
+	color: white;
+	font-family: Arial;
+	opacity: 1;
+	top:172px;
+	left: 465px;
+	position: absolute;
+	display:inline-block;
+	max-width:250px;
+	min-height:1.5em;
+	padding: 20px;
+	border: rgb(58, 58, 58) solid 4px;
+	background-color: rgb(58, 58, 58);
+	z-index: 4;
+}
+
+.informationText:after {	
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0;
+	border-color: #FFFFFF transparent;
+	display: block;
+	width: 0;
+	z-index: 4;
+}
+
+.informationText:before {	
+	content: "";
+	position: absolute;
+	bottom: 30px;
+	left: -28px;
+	transform: rotate(80deg);
+	border-style: solid;
+	border-width: 18px 18px 0;
+	border-color: rgb(58, 58, 58) transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+}
+
+.informationTextInfoCircle {
+	color: white;
+	font-family: Arial;
+	opacity: 1;
+	top:172px;
+	left: 465px;
+	position: absolute;
+	display:inline-block;
+	max-width:250px;
+	min-height:1.5em;
+	padding: 20px;
+	border: rgb(58, 58, 58) solid 4px;
+	background-color: rgb(58, 58, 58);
+	z-index: 6;
+}
+
+.informationTextInfoCircle:after {	
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0;
+	border-color: #FFFFFF transparent;
+	display: block;
+	width: 0;
+	z-index: 6;
+}
+
+.informationTextInfoCircle:before {	
+	content: "";
+	position: absolute;
+	bottom: 30px;
+	left: -28px;
+	transform: rotate(80deg);
+	border-style: solid;
+	border-width: 18px 18px 0;
+	border-color: rgb(58, 58, 58) transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+}
+
+.showMap{
+	position: absolute;
+  	font-family: Arial;
+  	color: #ffffff;
+  	font-size: 22px;
+  	background: #de4d04;
+  	padding: 12.5px 30px 12.5px 30px;
+  	border: solid #000000 1px;
+  	text-decoration: none;
+	left: 90.5%;
+	bottom: 6%;
+}
+
+.startSceneBtn{
+	position: absolute;
+  	font-family: Arial;
+  	color: #ffffff;
+  	font-size: 22px;
+  	background: rgb(255, 172, 29);
+  	padding: 12.5px 30px 12.5px 30px;
+  	border: solid #000000 1px;
+  	text-decoration: none;
+	left: 90.5%;
+	bottom: 6%;
+}
+
+.startSceneBtn:hover {
+  	background: rgb(255, 172, 29);
+  	text-decoration: none;
+  	cursor: pointer;
+  	transform: scale(1.2);
+}
+
+.nextBtnCorner{
+	top: 89% !important;
+}
+
+#karawansereiObj1{
+	left: 743px;
+	top: 649px !important;
+	opacity: 1;
+	z-index: 2;
+}
+
+#karawansereiObj1:hover{
+	cursor: pointer;
+}
+
+#moscheeObj1{
+	left: 100px;
+	top: 50px !important;
+	opacity: 0;
+	z-index: 2;
+}
+
+#moscheeObj1:hover{
+	cursor: pointer;
+}
+
+#moscheeObj2{
+	left: 700px;
+	top: 500px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#moscheeObj2:hover{
+	cursor: pointer;
+}
+
+#moscheeObj3{
+	left: 800px;
+	top: 10px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#moscheeObj3:hover{
+	cursor: pointer;
+}
+
+#moscheeObj4{
+	left: 630px;
+	top: 400px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#moscheeObj4:hover{
+	cursor: pointer;
+}
+
+#suqObj1{
+	left: 370px;
+	top: 700px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj1:hover{
+	cursor: pointer;
+}
+
+#suqObj2{
+	left: 1400px;
+	top: 420px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj2:hover{
+	cursor: pointer;
+}
+
+#suqObj3{
+	left: 800px;
+	top: 750px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj3:hover{
+	cursor: pointer;
+}
+
+#suqObj4{
+	left: 800px;
+	top: 200px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj4:hover{
+	cursor: pointer;
+}
+
+#suqObj5{
+	left: 600px;
+	top: 250px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj5:hover{
+	cursor: pointer;
+}
+
+#suqObj6{
+	left: 775px;
+	top: 650px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#suqObj6:hover{
+	cursor: pointer;
+}
+
+#hamamObj1{
+	left: 645px;
+	top: 250px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#hamamObj1:hover{
+	cursor: pointer;
+}
+
+#hamamObj2{
+	left: 670px;
+	top: 420px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#hamamObj2:hover{
+	cursor: pointer;
+}
+
+#kircheObj1{
+	left: 60px;
+	top: 100px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#kircheObj1:hover{
+	cursor: pointer;
+}
+
+#kircheObj2{
+	left: 550px;
+	top: 0px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#kircheObj2:hover{
+	cursor: pointer;
+}
+
+#zimmerObj1{
+	left: 700px;
+	top: 60px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj1:hover{
+	cursor: pointer;
+}
+
+#zimmerObj2{
+	left: 550px;
+	top: 600px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj2:hover{
+	cursor: pointer;
+}
+
+
+#zimmerObj3{
+	left: 600px;
+	top: 300px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj3:hover{
+	cursor: pointer;
+}
+
+
+#zimmerObj4{
+	left: 1100px;
+	top: 700px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj4:hover{
+	cursor: pointer;
+}
+
+
+#zimmerObj5{
+	left: 820px;
+	top: 180px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj5:hover{
+	cursor: pointer;
+}
+
+
+#zimmerObj6{
+	left: 1580px;
+	top: 20px !important;
+	opacity: 0;
+	z-index: 2;
+}
+#zimmerObj6:hover{
+	cursor: pointer;
+}
+
+
+
+
